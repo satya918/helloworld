@@ -19,14 +19,14 @@ pipeline {
                   echo "Successfully creating war file"
 
             }
-            post {
-                success {
+            // post {
+            //     success {
                    
-                    // Archive the .war file generated in the "target" directory
-                    archiveArtifacts artifacts: 'target/*.war'
-                     echo 'Archiving the Artifacts'
-                }
-            }
+            //         // Archive the .war file generated in the "target" directory
+            //         archiveArtifacts artifacts: 'target/*.war'
+            //          echo 'Archiving the Artifacts'
+            //     }
+            // }
         }
         stage ('Deploy to tomcat server') {
             steps {
